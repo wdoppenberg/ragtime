@@ -18,6 +18,7 @@ pub trait Generator {
 	fn generate(&self, prompt: Self::Prompt) -> impl StreamExt;
 }
 
+#[allow(dead_code)]
 pub struct RAGClient<R, A, G, P, Ctx>
 where
 	R: Retriever<Prompt=P, Ctx=Ctx>,
